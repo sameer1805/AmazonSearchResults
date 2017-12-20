@@ -22,18 +22,18 @@ public class AmazonSearchResult {
 	 /*
      * Your AWS Associate tag.
      */
-    private static final String AWS_ASSOCIATE_TAG = "artigem1-20";
+    private static final String AWS_ASSOCIATE_TAG = "3circlecrm-20";//"artigem1-20";
 	
 	/*
      * Your AWS Access Key ID, as taken from the AWS Your Account page.
      */
-    private static final String AWS_ACCESS_KEY_ID = "AKIAIQDOMUIA7A7YW75Q";
+    private static final String AWS_ACCESS_KEY_ID = "AKIAIHGTNPW74ULNGTHA";//"AKIAIQDOMUIA7A7YW75Q";
 
     /*
      * Your AWS Secret Key corresponding to the above ID, as taken from the AWS
      * Your Account page.
      */
-    private static final String AWS_SECRET_KEY = "SqgGtYyAUc6ZmcrYdp/6DUj4P4TfcoF14yVjmeR0";
+    private static final String AWS_SECRET_KEY = "93mvrtM3t2U1gUlW/2rjHPj7rUo0VIhjwRBL79iG";//"SqgGtYyAUc6ZmcrYdp/6DUj4P4TfcoF14yVjmeR0";
 
     /*
      * Use the end-point according to the region you are interested in.
@@ -174,7 +174,7 @@ public class AmazonSearchResult {
             		Element itemAttribute = (Element)(item.getElementsByTagName("ItemAttributes").item(0));
             		
             		resultString.append("{");
-            		resultString.append("\"description\":\""+ itemAttribute.getElementsByTagName("Title").item(0).getTextContent() +"\",");
+            		resultString.append("\"description\":\""+ itemAttribute.getElementsByTagName("Title").item(0).getTextContent().replace('"',' ') +"\",");
             		resultString.append("\"brand\":\""+ itemAttribute.getElementsByTagName("Brand").item(0).getTextContent() +"\",");
             		try{
             		resultString.append("\"model\":\""+ itemAttribute.getElementsByTagName("Model").item(0).getTextContent()  +"\",");
